@@ -26,7 +26,7 @@
         * main
         * test
     * build.sbt
-6.	Compile build.sbt (Scala config file) and then verify your project now has a target folder with compiled object files inside of it:
+6. Compile build.sbt (Scala config file) and then verify your project now has a target folder with compiled object files inside of it:
     * ProjectName
       * project
         * target
@@ -56,17 +56,59 @@ libraryDependencies ++= Seq(
     * Right-Click the Scala folder in the test directory and select New - Package
     * Name it helloScala
     * Right-Click the new package and add another package. Name it Unit
-10)	Right-Click helloScala.unit package and add a new Scala class named “helloScalaTest”
-11)	Initialize the new Scala class
+10.   Right-Click helloScala.unit package and add a new Scala class named “helloScalaTest”
+11.	Initialize the new Scala class
     * Make “ExampleSpec” extend FlatSpec with Matchers
     * Create some test stubs
-12)	Initialize the project with a Scala object
+```
+package helloScala.unit
+
+import helloScala.HelloWorld
+import org.scalatest.{FlatSpec, Matchers}
+
+class exampleSpec extends FlatSpec with Matchers  {
+ behavior of "helloScala project"
+
+  it should "compute text message" in {
+    HelloWorld.computeMessage() shouldEqual "hello world: "
+  }
+
+  it should "compute result number" in {
+     HelloWorld.computeNumber() shouldEqual 123
+  }
+}
+
+```
+12.   Initialize the project with a Scala object
     * Right-Click the scala folder in the main directory and select new  package
     * Name it helloScala
     * Right-Click the new package and add a new Scala Class but change the type to Object
     * Name it HelloWorld
-13)	 Implement the Scala object so that your tests will pass
-14)	Push the project to github
+13.   Implement the Scala object so that your tests will pass
+```
+package helloScala
+
+object HelloWorld {
+
+  def computeMessage(): String = {
+    return "hello world: "
+  }
+
+  def computeNumber(): Int = {
+    return 123
+  }
+
+  def main(args: Array[String]): Unit =  {
+    val message = computeMessage ()
+
+    val number = computeNumber ()
+
+    println(message + number)
+  }
+}
+
+```
+14.	Push the project to github
     * Create a new repository in github without a readme
     * Initialize git in project folder “git init”
     * Make a change and compile your code so that it will detect changes
