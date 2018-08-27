@@ -58,7 +58,7 @@ libraryDependencies ++= Seq(
     * Right-Click the new package and add another package. Name it Unit
 10.   Right-Click helloScala.unit package and add a new Scala class named “helloScalaTest”
 11.	Initialize the new Scala class
-    * Make “ExampleSpec” extend FlatSpec with Matchers
+    * Make “helloScalaTest” extend FlatSpec with Matchers
     * Create some test stubs
 ```
 package helloScala.unit
@@ -66,7 +66,7 @@ package helloScala.unit
 import helloScala.HelloWorld
 import org.scalatest.{FlatSpec, Matchers}
 
-class exampleSpec extends FlatSpec with Matchers  {
+class helloScalaTest extends FlatSpec with Matchers  {
  behavior of "helloScala project"
 
   it should "compute text message" in {
