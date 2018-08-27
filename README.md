@@ -1,4 +1,9 @@
-# HelloScala
+###### Prerequisites
+* JVM
+* basic understanding of unit tests
+
+
+# HelloScala with IntelliJ IDEA
 1.	Download Intellij IDEA (Either edition is fine)
 2.	If you have settings from a previous version, import them
 3.	Download the Scala Plugin
