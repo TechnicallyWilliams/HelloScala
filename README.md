@@ -74,3 +74,6 @@ libraryDependencies ++= Seq(
     * Commit all files “git commit -m ‘commit message’”
     * Add remote repo to your repository: “git remote add origin ‘github url’ “
     * Initialize remote repo by pushing to your remote branch: “git remote add origin”
+
+#Reference
+https://www.youtube.com/watch?v=6sBadc69UtM
